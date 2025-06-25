@@ -1,0 +1,21 @@
+body {
+    background-color: lightblue;
+    height: 100vh;
+}
+
+h1 {
+    color: lightpink;
+}
+
+button {
+    background-color: lightpink;
+    color: white;
+    border-radius: 15%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
