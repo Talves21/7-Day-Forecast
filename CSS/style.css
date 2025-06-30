@@ -3,19 +3,18 @@ body {
     height: 100vh;
 }
 
-h1 {
-    color: lightpink;
+.date {
+    padding-left: 55%;
 }
 
-button {
-    background-color: lightpink;
-    color: white;
-    border-radius: 15%;
-    padding: 10px;
-    margin: 10px;
+input {
+    height: 65%;
 }
 
-button:hover {
-    background-color: white;
-    color: black;
+.day0 {
+    padding-left: 25%;
+}
+
+.secondRow {
+    padding-left: 25%;
 }

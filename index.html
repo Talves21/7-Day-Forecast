@@ -9,20 +9,58 @@
 </head>
 <body>
     <header role="banner">
-        <h1 class="text-center pb-5">Weather Forecast</h1>
+        <div class="row">
+            <div class="col-6">
+                <h1 class="text-center pb-5">Weather Forecast</h1>
+            </div>
+            <div class="col-6 date">
+                <h5>Today's Date:</h5>
+            </div>
+        </div>
     </header>
 
     <main role="main">
         <section class="container-fluid">
             <div class="row">
-                <div class="col-12 text-center">
-                    <button id="day0">Sunday</button>
-                    <button id="day1">Monday</button>
-                    <button id="day2">Tuesday</button>
-                    <button id="day3">Wednesday</button>
-                    <button id="day4">Thursday</button>
-                    <button id="day5">Friday</button>
-                    <button id="day6">Saturday</button>
+                <h3 class="text-center pb-3">Input Location</h3>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <p class="pe-4">Latitude</p>
+                    <input type="text"> 
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <p class="pe-2">Longitude</p>
+                    <input type="text">
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid pt-5">
+            <div class="row firstRow">
+                <div class="col-3">
+                    <h5 class="day0">Sunday</h5>
+                </div>
+                <div class="col-3">
+                    <h5 class="day1">Monday</h5>
+                </div>
+                <div class="col-3">
+                    <h5 class="day2">Tuesday</h5>
+                </div>
+                <div class="col-3">
+                    <h5 class="day3">Wednesday</h5>
+                </div>
+            </div>
+
+            <div class="row secondRow">
+                <div class="col-4">
+                    <h5 class="day4">Thursday</h5>
+                </div>
+                <div class="col-4">
+                    <h5 class="day5">Friday</h5>
+                </div>
+                <div class="col-4">
+                    <h5 class="day6">Saturday</h5>
                 </div>
             </div>
         </section>
