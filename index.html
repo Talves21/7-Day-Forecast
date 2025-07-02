@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast</title>
+    <title>7-Day Weather Forecast</title>
     <link rel="stylesheet" href="./CSS/bootstrap.css">
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
@@ -11,10 +11,10 @@
     <header role="banner">
         <div class="row">
             <div class="col-6">
-                <h1 class="text-center pb-5">Weather Forecast</h1>
+                <h1 class="text-center pb-5">7-Day Weather Forecast</h1>
             </div>
-            <div class="col-6 date">
-                <h5>Today's Date:</h5>
+            <div class="col-6">
+                <h5 class="date"></h5>
             </div>
         </div>
     </header>
@@ -22,45 +22,53 @@
     <main role="main">
         <section class="container-fluid">
             <div class="row">
-                <h3 class="text-center pb-3">Input Location</h3>
-
-                <div class="col-12 d-flex justify-content-center">
-                    <p class="pe-4">Latitude</p>
-                    <input type="text"> 
-                </div>
-
-                <div class="col-12 d-flex justify-content-center">
-                    <p class="pe-2">Longitude</p>
-                    <input type="text">
+                <div class="col-12 text-center">
+                    <button class="forecast mt-5">Get Forecast</button>
+                    <p class="message text-center pt-2"></p>
+                    <p class="location p-3"></p>
                 </div>
             </div>
         </section>
 
-        <section class="container-fluid pt-5">
+        <section class="container-fluid pt-3 days">
             <div class="row firstRow">
-                <div class="col-3">
-                    <h5 class="day0">Sunday</h5>
+                <div class="col-3 day0">
+                    <h5 class="text-center">Today</h5>
+                    <br>
+                    <p class="temperature"></p>
                 </div>
-                <div class="col-3">
-                    <h5 class="day1">Monday</h5>
+                <div class="col-3 day1">
+                    <h5 class="text-center"></h5>
+                    <br>
+                    <p></p>
                 </div>
-                <div class="col-3">
-                    <h5 class="day2">Tuesday</h5>
+                <div class="col-3 day2">
+                    <h5 class="text-center"></h5>
+                    <br>
+                    <p></p>
                 </div>
-                <div class="col-3">
-                    <h5 class="day3">Wednesday</h5>
+                <div class="col-3 day3">
+                    <h5 class="text-center"></h5>
+                    <br>
+                    <p></p>
                 </div>
             </div>
 
             <div class="row secondRow">
-                <div class="col-4">
-                    <h5 class="day4">Thursday</h5>
+                <div class="col-4 day4">
+                    <h5 class="text-center"></h5>
+                    <br>
+                    <p></p>
                 </div>
-                <div class="col-4">
-                    <h5 class="day5">Friday</h5>
+                <div class="col-4 day5">
+                    <h5 class="text-center"></h5>
+                    <br>
+                    <p></p>
                 </div>
-                <div class="col-4">
-                    <h5 class="day6">Saturday</h5>
+                <div class="col-4 day6">
+                    <h5 class="text-center"></h5>
+                    <br>
+                    <p></p>
                 </div>
             </div>
         </section>
