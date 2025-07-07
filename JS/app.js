@@ -20,21 +20,22 @@ let forecastBtn = document.querySelector('.forecast');
 
 let findMe = async () => {
     let success = (position) => {
-        message.innerText = 'Your Location was found!'
+        message.textContent = 'success'
         let {latitude, longitude} = position.coords;
         lat = latitude;
         long = longitude;
+        locationData();
     };
 
     let error = () => {
-        message.innerText = 'Location not Found';
+
     }
 
     navigator.geolocation.getCurrentPosition(success, error);
 }
 
 async function locationData() {
-    await fetch(`https://api.weather.gov/points/${lat}, ${long}`)
+    await fetch(`https://api.weather.gov/points/${lat},${long}`)
         .then(res => res.json())
         .then(data => {
             currLocation = data;
@@ -44,7 +45,7 @@ async function locationData() {
 }
 
 async function forecastData () {
-    await fetch(`https://api.weather.gov/gridpoints/AKQ/${currLocation.properties.gridX},${currLocation.properties.gridY}/forecast?units=us`)
+    await fetch(`https://api.weather.gov/gridpoints/AKQ/${currLocation.gridX},${currLocation.gridY}/forecast?units=us`)
         .then(res => res.json)
         .then(data => {
             currWeather = data;
@@ -52,16 +53,10 @@ async function forecastData () {
     })
 }
 
-async function displayData() {
-    temperature.innerText = `${currWeather.periods.temperature} F`
-}
-
 forecastBtn.addEventListener('click', async () => {
     days.style.display = 'block';
     findMe();
-    await locationData();
-    await forecastData();
-    displayData();
 })
+
 
 
